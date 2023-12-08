@@ -8,17 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var breeds = DogBreeds()
+    @State private var selectedBreed : String?
+    @State private var imageURL: URL?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    
+            NavigationView {
+                VStack {
+                    if let breed = selectedBreed {
+                        Text("\(breed)")
+                            .padding()
+                            .font(.headline)
+                    } else {
+                        Text("")
+                    }
+                        
+                    Text("Välj hundras")
+                    
+                    NavigationLink(destination: ViewDogBreeds(breeds: breeds, selectedBreed: $selectedBreed)) {
+                        Text("Bläddra")
+                    }
+                }
+                .padding()
+            }
         }
-        .padding()
     }
-}
 
-#Preview {
+#Preview {		
     ContentView()
 }

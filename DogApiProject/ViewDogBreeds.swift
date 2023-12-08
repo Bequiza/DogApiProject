@@ -8,11 +8,46 @@
 import SwiftUI
 
 struct ViewDogBreeds: View {
+    
+    @ObservedObject var breeds = DogBreeds()
+    @Binding var selectedBreed: String?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            VStack {
+                
+                List(breeds.breed, id: \.self) { breed in
+                    Button(action: {
+                        selectedBreed = breed
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        }
+                    }) {
+                        HStack {
+                            
+                            Text(breed)
+                            Spacer()
+                            
+                            if breed == selectedBreed {
+                                Image(systemName: "checkmark")
+                            }
+                        }
+                    }
+                }
+            }
+            .onAppear() {
+                    Task {
+                        await breeds.loadApi()
+                    }
+                }
+            }
+        }
     }
-}
 
-#Preview {
-    ViewDogBreeds()
+//detta under fattade jag ingenting av.
+
+struct ViewDogBreeds_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewDogBreeds(breeds: DogBreeds(), selectedBreed: .constant(nil))
+    }
 }

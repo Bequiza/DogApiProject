@@ -11,6 +11,8 @@
 		38F274DB2B21D1150033E1C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F274DA2B21D1150033E1C9 /* ContentView.swift */; };
 		38F274DD2B21D11D0033E1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F274DC2B21D11D0033E1C9 /* Assets.xcassets */; };
 		38F274E02B21D11D0033E1C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38F274DF2B21D11D0033E1C9 /* Preview Assets.xcassets */; };
+		38F274E72B21D1560033E1C9 /* DogBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F274E62B21D1560033E1C9 /* DogBreeds.swift */; };
+		38F274E92B21D6C30033E1C9 /* ViewDogBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F274E82B21D6C30033E1C9 /* ViewDogBreeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		38F274DA2B21D1150033E1C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		38F274DC2B21D11D0033E1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38F274DF2B21D11D0033E1C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		38F274E62B21D1560033E1C9 /* DogBreeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreeds.swift; sourceTree = "<group>"; };
+		38F274E82B21D6C30033E1C9 /* ViewDogBreeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDogBreeds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				38F274D82B21D1150033E1C9 /* DogApiProjectApp.swift */,
 				38F274DA2B21D1150033E1C9 /* ContentView.swift */,
+				38F274E82B21D6C30033E1C9 /* ViewDogBreeds.swift */,
+				38F274E62B21D1560033E1C9 /* DogBreeds.swift */,
 				38F274DC2B21D11D0033E1C9 /* Assets.xcassets */,
 				38F274DE2B21D11D0033E1C9 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F274E92B21D6C30033E1C9 /* ViewDogBreeds.swift in Sources */,
 				38F274DB2B21D1150033E1C9 /* ContentView.swift in Sources */,
 				38F274D92B21D1150033E1C9 /* DogApiProjectApp.swift in Sources */,
+				38F274E72B21D1560033E1C9 /* DogBreeds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
